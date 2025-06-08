@@ -31,12 +31,23 @@ categories: [git, blog, guide]
    git clone https://github.com/username/username.github.io.git
 
 ---
-## 3. 초기화
-echo "<h1>Hello Blog</h1>" > index.html
-git add index.html
-git commit -m "Initialize blog"
-git push origin main
+## 🔄 블로그 초기화: index.html 만들고 올리기
 
+```bash
+# 1. 현재 블로그 저장소 디렉토리로 이동
+cd C:\blog\git\subeenyoo777.github.io
+
+# 2. index.html 파일 생성
+echo "<h1>Hello Blog</h1>" > index.html
+
+# 3. Git으로 스테이징
+git add index.html
+
+# 4. 커밋 메시지와 함께 저장
+git commit -m "Initialize blog"
+
+# 5. 원격 저장소(GitHub)로 푸시
+git push origin main
 ---
 ## 4. git 명령어
 | 작업    | 명령어                               | 설명                         |
@@ -54,11 +65,11 @@ git push origin main
 
 ---
 ## 5. 블로그 글 작성(crud 실습용)
-📂 1. _posts 폴더 만들기 (최초 1회만)
-mkdir _posts
+## 📂 1. `_posts` 폴더 만들기 (최초 1회만)
 
-🆕 마크다운 파일 작성 Create
-파일 이름은 반드시 YYYY-MM-DD-title.md 형식으로 작성:
+```bash
+mkdir _posts
+🆕 2. 마크다운 글 작성 (Create)
 notepad _posts/2025-06-08-my-first-post.md
 
 예시 내용:
@@ -69,26 +80,38 @@ date: 2025-06-08 12:00:00 +0900
 categories: [blog, git]
 ---
 
-이 포스트는 GitHub Pages로 블로그를 운영하기 위한 실전 가이드입니다.
+파일을 저장한 후, Git으로 등록:
 
+git add _posts/2025-06-08-my-first-post.md
+git commit -m "Add first blog post"
+git push origin main
 
-🛠 Update [Git으로 푸시]
-(1)파일 열고 내용 수정
-(2)Git으로 반영:
+🛠 3. 글 수정 (Update)
+ 1. 파일을 열고 내용 수정
+ 2. 아래 명령어로 수정 사항 반영:
+
 git add _posts/2025-06-08-my-first-post.md
 git commit -m "Update first post content"
 git push origin main
 
-❌ Delete
+❌ 4. 글 삭제 (Delete)
 del _posts/2025-06-08-my-first-post.md
 git add -A
 git commit -m "Delete first post"
 git push origin main
 
+⚙️ 5. _config.yml 설정 예시
+Jekyll로 블로그 글이 정상적으로 보이게 하려면 _config.yml 파일이 필요합니다.
 
-⚙️ 5. _config.yml 예시 
-   - Jekyll 설정 파일이 없으면 글이 표시되지 않을 수 있습니다 
+yaml
+
 title: "Subeen's Dev Blog"
 description: "Git, Code, Life."
 theme: minima
 author: subeenyoo777
+
+작성 후 커밋:
+
+git add _config.yml
+git commit -m "Add site config"
+git push origin main
