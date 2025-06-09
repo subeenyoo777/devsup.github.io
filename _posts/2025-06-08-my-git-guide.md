@@ -67,7 +67,7 @@ categories: [git, blog, guide]
      git push origin main
 ```
 
-### 4. 블로그 글 작성(crud 실습용)
+###  [1]Create
 #### 📂 1. `_posts` 폴더 만들기 (최초 1회만)
 
 ```bash
@@ -93,7 +93,7 @@ git commit -m "Add first blog post"
 git push origin main
 ```
 
-#### 🛠 3. 글 수정 (Update)
+### 🛠[2] 글 수정 (Update)
  1. 파일을 열고 내용 수정
  2. 아래 명령어로 수정 사항 반영:
 ```bash
@@ -125,7 +125,7 @@ git push origin main
  - 기존에 Git에 등록된 파일만	자동으로 add됨
  - 새로운 .md 파일을 추가했을 경우에는 -am 명령은 무시됨
 
-#### ❌ 4. 글 삭제 (Delete)
+### ❌ [3] 글 삭제 (Delete)
 ```bash
 del _posts/2025-06-08-my-first-post.md
 git add -A
@@ -133,7 +133,7 @@ git commit -m "Delete first post"
 git push origin main
 ```
 
-#### ⚙️ 5. _config.yml 설정 예시
+#### ⚙️ [4] _config.yml 설정 예시
 Jekyll로 블로그 글이 정상적으로 보이게 하려면 _config.yml 파일이 필요합니다.
 
 yaml

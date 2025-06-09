@@ -29,10 +29,11 @@ Markdown은 간단한 기호로 **제목, 목록, 강조, 코드, 링크, 표** 
 ~~취소선~~
 ```
 
+---
 
-📝 목록 (List)
+## 📝 목록 (List)
 순서 있는 목록:
-markdown
+```markdown
 1. 첫 번째
 2. 두 번째
 3. 세 번째
@@ -41,28 +42,28 @@ markdown
 - 항목 A
 - 항목 B
 * 항목 C
+```
 
-
-💻 코드 (Code)
+## 💻 코드 (Code)
 인라인 코드:
-markdown
+``` markdown
 `print("Hello")`
+```
 
-
-코드 블록:
+## 코드 블록:
 <pre> ```python def hello(): print("Hello Git Blog!") ``` </pre>
 
 
-🔗 링크와 이미지
+## 🔗 링크와 이미지
 [GitHub](https://github.com)
 ![이미지설명](https://example.com/image.png)
 
 
-💬 인용문
+## 💬 인용문
 > 이건 인용문입니다.
 
 
-📊 표 (Table)
+## 📊 표 (Table)
 
 | 이름   | 역할     | 비고          |
 |--------|----------|---------------|
@@ -70,12 +71,12 @@ markdown
 | you    | 독자     | Welcome!       |
 
 
-➖ 수평선 (구분선)
+## ➖ 수평선 (구분선)
 
 ---
 
 
-⚙ Jekyll용 설정(YAML Front Matter)
+## ⚙ Jekyll용 설정(YAML Front Matter)
 Markdown 글의 가장 윗부분에는 YAML 설정이 들어갑니다:
 
 ---
